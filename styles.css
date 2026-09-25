@@ -270,6 +270,55 @@ main {
   gap: 1.25rem;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.card a {
+  display: block;
+  overflow: hidden;
+  background-color: var(--background);
+  height: 200px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card p {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  flex: 1;
+}
+
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
