@@ -1,0 +1,7 @@
+﻿git : fatal: path '.gitignore' exists on disk, but not in 'e843390'
+At line:1 char:532
++ ... d > README.md ; git show e843390:.gitignore > .gitignore 2>&1 | Where ...
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: path '.g...ot in 'e843390':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

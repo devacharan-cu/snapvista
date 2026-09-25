@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapVista</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-title">
+        <h1>SnapVista</h1>
+        <p class="tagline">Discover moments, explore visions</p>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+
+    <form id="search-form" class="search-form">
+      <div class="search-container">
+        <label for="search-input" class="search-label">Search for images</label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Enter a topic..."
+          class="search-input"
+        />
+        <button type="submit" id="search-button" class="search-button">Search</button>
+        <button type="reset" id="clear-button" class="clear-button">Clear</button>
+      </div>
+    </form>
+
+    <div class="suggestions">
+      <span class="suggestions-label">Quick picks:</span>
+      <div class="suggestion-chips">
+        <button class="chip" data-topic="nature">Nature</button>
+        <button class="chip" data-topic="cities">Cities</button>
+        <button class="chip" data-topic="animals">Animals</button>
+        <button class="chip" data-topic="technology">Technology</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="status-container">
+      <p id="status" class="status-message"></p>
+    </div>
+
+    <div id="empty-state" class="empty-state">
+      <div class="empty-state-content">
+        <svg class="empty-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="32" cy="32" r="28"/>
+          <path d="M20 24h24M20 40h24M32 20v24"/>
+        </svg>
+        <p>Search to see results</p>
+      </div>
+    </div>
+
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
